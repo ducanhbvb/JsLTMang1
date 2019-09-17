@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let arrayinteger=[];
+    for(let i=0; i<100;i++){
+        arrayinteger[i]=Math.floor(Math.random()*100);
+    }
+    let max=arrayinteger[0];
+    let sum=0;
+    function average(a) {
+        let b=parseInt(a/100);
+        return b;
+    }
+    function checkmax() {
+        for (let i=0;i<100;i++){
+            if(arrayinteger[i]>=max){
+                max=arrayinteger[i];
+            }
+            sum+=arrayinteger[i];
+        }
+    }
+    checkmax();
+    document.write(arrayinteger+'<br>');
+    document.write('Max='+max+'<br>');
+    document.write('location='+average(sum)+'<br>');
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Bài 5- Viết chương trình đếm số lượng nguyên âm trong một chuỗi
+</p>
+<h1>Vowel Count</h1>
+<input type="text" id="txt">
+<button type="button" onclick="count(txt.value)">Seach</button>
+<p id="result"></p>
+<script>
+    count = function (str) {
+        let x = 0;
+        for (let i = 0; i < str.length; i++) {
+            if ((str[i] === 'a') || (str[i] === 'i') || (str[i] === 'o') || (str[i] === 'e') || (str[i] === 'u')) {
+                x++;
+            }
+        }
+        document.getElementById('result').innerHTML = x;
+    }
+</script>
+</body>
+</html>

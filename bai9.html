@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+    <p> Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một
+        mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c.
+        Hiển thị mảng c.</p>
+</head>
+<body>
+<script>
+    function connected() {
+        for (let i = 20; i < 40; i++) {
+            if (i >= 30) {
+                crray[i] = brray[i - 30];
+            } else {
+                crray[i] = array[i - 20];
+            }
+        }
+    }
+    function radom(a){
+        return Math.floor(Math.random() * a);
+    }
+    let brray = [];
+    let crray = [];
+    let array = [];
+    for (let i = 0; i < 20; i++) {
+        crray[i] = radom(10);
+        if (i >= 0 && i < 10) {
+            brray[i] = radom(10);
+            array[i] = radom(10);
+        }
+    }
+    document.write(crray + "<br>");
+    connected();
+    document.write(array + "<br>");
+    document.write(brray + "<br>");
+    document.write(crray + "<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    function Delete(i) {
+        for(let j=i;j<array.length-1;j++){
+            array[j]=array[j+1];
+        }
+        array.pop();
+    }
+    function checkV(a) {
+        for(let i=0;i<array.length;i++){
+            if(array[i]===a){
+                Delete(i);
+            }
+        }
+    }
+    let array=[];
+    let v=parseInt(prompt("input number V= "));
+    for(let i=0;i<100;i++) {
+        array[i] = Math.floor(Math.random() * 10);
+    }
+    document.write(array+"<br>");
+    document.write(array.length+'<br>');
+    checkV(v);
+    document.write(v+"<br>");
+    document.write(array+"<br>");
+        document.write(array.length);
+
+</script>
+</body>
+</html>

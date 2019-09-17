@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    function checkV(a) {
+        for(let i=0;i<array.length;i++){
+            if(array[i]===a){
+                return true;
+            }
+        }
+        return false;
+    }
+    let array=[];
+    let v=parseInt(prompt("input number V= "));
+    for(let i=0;i<100;i++) {
+        array[i] = Math.floor(Math.random() * 10);
+    }
+    document.write(array+"<br>");
+    if(checkV(v)){
+        document.write("V is in the array");
+    }else {
+        document.write("V is not in the array");
+    }
+</script>
+</body>
+</html>

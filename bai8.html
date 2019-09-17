@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+    <P>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</P>
+</head>
+<body>
+<script>
+    function radom(a) {
+        return Math.floor(Math.random() * a);
+    }
+    function xx(a,b) {
+                let tg=array[a];
+                array[a]=array[b];
+                array[b]=tg;
+    }
+    function Sort() {
+        let i,j,z;
+        let tdmax,tdmin;
+        for (i=0;i<=50;i++){
+            let max=array[100-i];
+            let min=array[i];
+            for (j=i,z=100-i;j<100-i,z>i;j++,z--){
+                if(array[z]>=max){
+                    max=array[z];
+                    tdmax=z;
+                }
+                if (array[j]<=min){
+                    min=array[j]
+                   tdmin=j;
+                }
+            }
+            xx(i,tdmin);
+            xx((100-i),tdmax);
+        }
+    }
+    let array = [];
+    for (let i = 0; i < 100; i++) {
+        array[i] = radom(100);
+    }
+    Sort();
+    document.write(array);
+</script>
+</body>
+</html>

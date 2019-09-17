@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let arrayinteger=[];
+    for(let i=0; i<100;i++){
+        arrayinteger[i]=Math.floor((Math.random()*10)-5);
+    }
+    let max=arrayinteger[0];
+    let Count=0;
+    function checkmax() {
+        for (let i=0;i<100;i++){
+            if(arrayinteger[i]<0){
+                Count++;
+            }
+        }
+    }
+    checkmax();
+    document.write(arrayinteger+'<br>');
+    document.write('Count='+Count);
+   // document.write('location='+location1+'<br>');
+</script>
+</body>
+</html>
